@@ -34,19 +34,21 @@
     <div class="flex w-screen h-screen items-center justify-center">
       <!-- Card container -->
       <div
-        class="flex flex-col items-center w-11/12 rounded-lg bg-dark-gray-blue p-5"
+        class="flex flex-col shadow-lg items-center w-11/12 max-w-[550px] rounded-lg bg-dark-gray-blue p-5 relative"
       >
         <!-- Advice text -->
-        <p class="text-neon-green text-xs tracking-[0.2rem] mb-6 mt-4">
+        <p
+          class="text-neon-green text-xs md:text-sm tracking-[0.3rem] mb-6 mt-4"
+        >
           ADVICE #117
         </p>
         <!-- Quote -->
-        <p class="text-center text-light-cyan">
+        <p class="text-center text-light-cyan md:px-5" id="quote">
           "It is easy to sit up and take notice, what's difficult is getting up
           and taking action."
         </p>
         <!-- Divider -->
-        <div class="my-5">
+        <button class="mt-7 mb-10">
           <img
             src="./images/pattern-divider-mobile.svg"
             alt="quote divider"
@@ -57,10 +59,16 @@
             alt="quote divider"
             class="hidden md:block"
           />
-        </div>
+        </button>
         <!-- Dice button -->
-        <img src="" alt="" />
+        <div
+          class="hover:shadow-[0_0_2rem_#52ffa8] transition-shadow duration-100 bg-neon-green rounded-full w-16 h-16 flex items-center justify-center absolute bottom-[-2rem] cursor-pointer"
+          onclick="handleClick()"
+        >
+          <img src="./images/icon-dice.svg" alt="Dice" />
+        </div>
       </div>
     </div>
+    <script src="./index.js"></script>
   </body>
 </html>
